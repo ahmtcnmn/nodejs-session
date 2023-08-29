@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=title%></title>
+</head>
+<body>
+    <p><%=p1%></p>
+   
+    <% if (session.username) { %>
+        <p><%= session.username %> (<%=decrypt(session.user_id)%>) 
+        <img src="../<%= session.avatar%>" alt="" style="width: 10%;"><br><br>
+        
+        <a href="/logout">Out</a>
+        <%} else {%>
+            <a href="/login">Login</a>  
+            <a href="/register">Sing in</a>  
+
+            <% } %>
+    
+</body>
+</html>

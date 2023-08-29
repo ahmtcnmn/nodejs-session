@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Welcome</h1>
+    <% if(typeof errors !=='undefined' ) { %>
+        <div style="background-color: red;color: white;"> 
+            <% for(let error of errors){ %>
+                <%=error.msg%> <br>
+                <% }%>
+        </div>
+     <% }%>
+
+
+                    <form action="/register" enctype="multipart/form-data" method="post">
+                        <h3>User Name</h3>
+                        <input type="text" name="username">
+                        <br>
+                        <h3>E-mail</h3>
+                        <input type="email" name="email"
+                            value="<%= typeof formData !== 'undefined' ? formData.email : ''%>"> <br>
+                        <h3>Your Picture</h3>
+                        <input type="file" name="avatar">
+                        <h3>Password</h3>
+                        <input type="password" name="password"> <br>
+                        <h3>Password(Again)</h3>
+                        <input type="password" name="passwordConfirmation"> <br>
+
+                        <button type="submit">Register</button>
+                    </form>
+</body>
+
+</html>
