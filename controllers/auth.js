@@ -101,24 +101,3 @@ export const isCheckRegisterError = (req, res) => {
     }
 }
 
-// const uploadIsempty= (req,res)=>{ Bu kendi denemem çalışıyor babba
-//     const email=req.body.email;
-//     const username= req.body.username;
-//     const password= req.body.password;
-//     let avatar = req.files.avatar
-//     //Fosya adını önce '.' larla ayırıyor sonra pop ile sonrdakini fileExtensiona alıyor. Sonrasında kalanları join ile birleştiriyor.
-//     //Let path yüklerken dosya konumu + tarihi + '-' + dosya adını + ayırdıgı uzantıyı ekleyerek kaydediyor
-//     let file = avatar.name.split('.')
-//     let fileExtension= file.pop()
-//     let fileName= file.join('')
-//     let path = 'upload/'+Date.now()+'-'+slugify(fileName,{
-//         lower:true,
-//     })+'.'+fileExtension;    
-//     var sql = `INSERT INTO kullanicilar(id,email,username,password,avatar) VALUES (NULL,'${email}',' ${username}','${password}','${path}');`
-//     con.query(sql, (err,result)=>{
-//         if (err) {
-//             console.error('Error updating data in the database: ' + err.stack);
-//             return;
-//         }
-//     })
-// }
