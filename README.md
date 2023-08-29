@@ -1,0 +1,11 @@
+# nodejs-session
+## -dotenv
+## -ejs
+## -express
+## -express-fileupload
+## -express-session
+## -express-validatior
+## -mysql2
+## -nodemon
+## -slugify
+## -winston
